@@ -10,27 +10,29 @@ for _ in range(a):
     if b[0] == 'push':
         Q.put(b[1])
     elif b[0] == 'pop':
-        if Q.qsize():
-            print(Q.get())
-        else:
+        if Q.empty():
             print(-1)
+        else:
+            print(Q.get())
+
     elif b[0] == 'size':
         print(Q.qsize())
     
     elif b[0] == 'empty':
-        if Q.qsize():
-            print(0)
-        else:
+        if Q.empty():
             print(1)
+        else:
+            print(0)
 
     elif b[0] == 'front':
-        if Q.qsize():
-            print(Q.queue[0])
-        else:
+        if Q.empty():
             print(-1)
 
-    elif b[0] == 'back':
-        if Q.qsize():
-            print(Q.queue[-1])
         else:
+            print(Q.queue[0])
+
+    elif b[0] == 'back':
+        if Q.empty():
             print(-1)
+        else:
+            print(Q.queue[-1])
