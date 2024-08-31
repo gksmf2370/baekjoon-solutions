@@ -7,6 +7,7 @@ def is_prime(n):
         if n%i ==0:
             return False
     return True
+
 n_list = list(range(1,246913))
 prime_list =[]
 for i in n_list:
